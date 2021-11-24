@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- boxIcons-->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <!-- link css-->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- link js-->
+    <script defer src="./assets/js/main.js"></script>
+</head>
+
+<body>
+    <!-- scroll-top -->
+    <a href="" class="scrollTop" id="scroll-top"><i class='bx bx-chevrons-up scroll__top__icon'></i></a>
+
+    <!-- header -->
+    <header class="header" id="header">
+        <!-- nav -->
+        <nav class="nav bd-container">
+            <h1><a href="#" class="logo">B1-202</a></h1>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link  active-link">Home</a></li>
+                    <li class="nav__item"><a href="#limp" class="nav__link">Limpeza</a></li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu-alt-right'></i>
+            </div>
+        </nav>
+        <!-- end nav -->
+    </header>
+    <!-- end header -->
+
+    <!-- main -->
+    <main>
+        <!-- home -->
+        <section class="home" id="home">
+            <div class="home__container bd-container bd-grid">
+                <div class="home__data">
+                    <h1 class="home__title">Bem vindo ao <span>B1-202</span></h1>
+                    <h2 class="home__subtitle">Cronograma de limpeza</h2>
+                    <div class="home__btn">
+                        <a href="#limp" class="btn-outline" id="limpeza">LIMPEZA </a>
+                    </div>
+                </div>
+                <img src="./assets/img/home_img.svg" alt="imagem tecnologia" class="home__img">
+            </div>
+        </section>
+        <!--end home -->
+
+        <!--Limpeza-->
+        <section class="section" id="limp">
+            <h1 class="section-title">Limpeza</h1>
+            <h2 class="section-subtitle">setores</h2>
+            <h2 class="section-subtitle" id="dateNow"></h2>
+
+            <div class="limpeza__container bd-container bd-grid ">
+
+                <div class="card">
+                    <div class="card__img">
+                        <img src="./assets/img/3-kitche.svg " alt="">
+                    </div>
+                    <div class="card__data">
+                        <h3>Cozinha</h3>
+                        <div class="card__desc">
+                            <small class="one"></small>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="card">
+                    <div class="card__img">
+                        <img src="./assets/img/Clutter-rafiki.svg" alt="">
+                    </div>
+                    <div class="card__data">
+                        <h3>Lixo</h3>
+                        <div class="card__desc">
+                            <small class="one"></small>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="card__img">
+                        <img src="./assets/img/4-living-room.svg" alt="">
+                    </div>
+                    <div class="card__data">
+                        <h3>Sala</h3>
+                        <div class="card__desc">
+                            <small class="one"></small>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="card__img">
+                        <img src="./assets/img/1-bathroom.svg" alt="">
+                    </div>
+                    <div class="card__data">
+                        <h3>Banheiro</h3>
+                        <div class="card__desc">
+                            <small class="one"></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--end limpeza-->
+
+        <!--cdm do moment.js-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+            integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </main>
+    <!-- end main -->
+
+</body>
+
+</html>
