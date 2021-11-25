@@ -55,21 +55,21 @@ const date = moment().format('DD/MM/YYYY')
 const week = moment().isoWeeks();
 // constante que recebe a função anônima
 const cleaning = () => {
-    const one = document.getElementsByClassName("one")
+    const card__person = document.getElementsByClassName("card__person")
     const dateNow = document.getElementById('dateNow')
 
     btn.addEventListener('click', function () {
         dateNow.textContent = date;
         if (week % 2 === 0) {
-            one[0].textContent = "Alex"
-            one[1].textContent = "Alex"
-            one[2].textContent = "katy"
-            one[3].textContent = "Katy"
+            card__person[0].textContent = "Alex"
+            card__person[1].textContent = "Alex"
+            card__person[2].textContent = "katy"
+            card__person[3].textContent = "Katy"
         }
-        one[0].textContent = "Katy"
-        one[1].textContent = "Katy"
-        one[2].textContent = "Alex"
-        one[3].textContent = "Alex"
+        card__person[0].textContent = "Katy"
+        card__person[1].textContent = "Katy"
+        card__person[2].textContent = "Alex"
+        card__person[3].textContent = "Alex"
     })
 }
 cleaning()
