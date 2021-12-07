@@ -1,5 +1,5 @@
 /************ SHOW MENU **************/
-const showMneu = (toggleId, navId) => {
+const showMenu = (toggleId, navId) => {
     const toggle = document.getElementById(toggleId),
         nav = document.getElementById(navId)
     /*valida se se existe as variaveis*/
@@ -11,7 +11,7 @@ const showMneu = (toggleId, navId) => {
         })
     }
 }
-showMneu('nav-toggle', 'nav-menu')
+showMenu('nav-toggle', 'nav-menu')
 
 /************ remove-menu-mobile **************/
 const navLink = document.querySelectorAll('.nav__link')
@@ -24,6 +24,7 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /* link clicado com class active-link */
 const linkColor = document.querySelectorAll('.nav__link')
+
 function colorLink() {
     if (linkColor) {
         linkColor.forEach(L => L.classList.remove('active-link'))
@@ -43,7 +44,8 @@ window.addEventListener('scroll', scrollHeader)
 /************ mostrar o scrolltop **************/
 function scrollTop() {
     const scrollTop = document.getElementById('scroll-top');
-    if (this.scrollY >= 560) scrollTop.classList.add('scroll-top'); else scrollTop.classList.remove('scroll-top')
+    if (this.scrollY >= 560) scrollTop.classList.add('scroll-top');
+    else scrollTop.classList.remove('scroll-top')
 }
 window.addEventListener('scroll', scrollTop)
 
@@ -53,23 +55,24 @@ window.addEventListener('scroll', scrollTop)
 const btn = document.getElementById('limpeza')
 const date = moment().format('DD/MM/YYYY')
 const week = moment().isoWeeks();
-// constante que recebe a função anônima
-const cleaning = () => {
-    const card__person = document.getElementsByClassName("card__person")
-    const dateNow = document.getElementById('dateNow')
+const aLimpeza = [...document.querySelectorAll(".card__person")]
 
-    btn.addEventListener('click', function () {
-        dateNow.textContent = date;
-        if (week % 2 === 0) {
-            card__person[0].textContent = "Alex"
-            card__person[1].textContent = "Alex"
-            card__person[2].textContent = "katy"
-            card__person[3].textContent = "Katy"
-        }
-        card__person[0].textContent = "Katy"
-        card__person[1].textContent = "Katy"
-        card__person[2].textContent = "Alex"
-        card__person[3].textContent = "Alex"
-    })
+const dateNow = document.getElementById('dateNow')
+
+// constante que recebe a função anônima
+
+const cleaning = () => {
+    aLimpeza[0].innerHTML = "Katy"
+    aLimpeza[1].innerHTML = "Katy"
+    aLimpeza[2].innerHTML = "Alex"
+    aLimpeza[3].innerHTML = "Alex"
+    dateNow.textContent = date;
+
+    if (week % 2 === 0) {
+        aLimpeza[0].innerHTML = "Alex"
+        aLimpeza[1].innerHTML = "Alex"
+        aLimpeza[2].innerHTML = "katy"
+        aLimpeza[3].innerHTML = "Katy"
+    }
 }
-cleaning()
+cleaning();
