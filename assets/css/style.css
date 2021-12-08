@@ -12,8 +12,10 @@
     --light-color: #ffffff;
     --text-color: #171f07;
     --body-color: #ffffff;
+    --google-color: #DB4437;
+    --facebook-color: #4267B2;
     --color-gradient: linear-gradient(to right, #203a43 0%, #1298cc);
-    --container-color:linear-gradient(to right, #bdc3c7, #2c3e50);
+    --container-color: linear-gradient(to right, #bdc3c7, #2c3e50);
 
     /*---------------FONT AND TYPOGRAPHY -------------------*/
     --body-font: 'Poppins', sans-serif;
@@ -259,7 +261,7 @@ svg {
 /*---------------BUTTONS -------------------*/
 .btn {
     width: 100%;
-    background:var(--color-gradient);
+    background: var(--color-gradient);
     border: none;
     outline: none;
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
@@ -281,11 +283,11 @@ svg {
 }
 
 .btn-outline {
-    width: 70%;
+    width: 90%;
     background-color: transparent;
     border: 1px solid var(--first-color);
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 1rem;
     font-size: var(--normal-font-size);
     font-weight: var(--font-bold);
     letter-spacing: 3px;
@@ -383,7 +385,7 @@ svg {
 
 .nav__toggle {
     font-size: var(--h1-font-size);
-    color:var(--text-color);
+    color: var(--text-color);
 
     padding: 0.1rem 0.5rem;
     border: 1px solid var(--first-color);
@@ -524,81 +526,102 @@ svg {
 /*--------------- media queries -------------------*/
 
 @media (min-width:600px) {
-.home__img {
-    width: 80%;
-    margin: 0 auto;
-}
+    .home__img {
+        width: 80%;
+        margin: 0 auto;
+    }
 
-.limpeza__container {
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 2rem;
-    padding: 1rem 1rem;
-}
+    .limpeza__container {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+        padding: 1rem 1rem;
+    }
+
+    .user__aut__box {
+        width: 60%
+    }
+
+    .user__aut__box .btn-outline {
+        width: 70%;
+    }
 
 }
 
 @media (min-width:768px) {
-:root {
-    --big-font-size: 2.8rem;
-    --h1-font-size: 2rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.15rem;
-    --normal-font-size: 1rem;
-    --small-font-size: .980rem;
-}
-.logo{
-    margin: 0 2rem;
-}
-.home__container{
-    padding: 3rem 2rem;
-}
-.home__img{
-    width: 70%;
-}
+    :root {
+        --big-font-size: 2.8rem;
+        --h1-font-size: 2rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.15rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .980rem;
+    }
+
+    .logo {
+        margin: 0 2rem;
+    }
+
+    .home__container {
+        padding: 3rem 2rem;
+    }
+
+    .home__img {
+        width: 70%;
+    }
+
+    .user__aut__box {
+        width: 400px;
+    }
 }
 
 @media (min-width:960px) {
-    .nav__list{
+    .nav__list {
         display: flex;
         align-items: center;
         padding: 0;
     }
 
-    .nav__item{
+    .nav__item {
         margin-left: var(--mb-3);
     }
-    .nav__link{
+
+    .nav__link {
         font-size: var(--normal-font-size);
         font-weight: var(--font-bold);
         color: var(--text-color);
     }
+
     .nav__link:hover,
     .active-link {
         border-bottom: 2px solid var(--text-color);
     }
-    .nav__toggle{
+
+    .nav__toggle {
         display: none;
     }
+
     .btn-outline, .btn {
         letter-spacing: 1px;
     }
 
-    .home__container{
+    .home__container {
         padding: 0;
         height: calc(100vh - var(--header-height));
         align-items: center;
         grid-template-columns: 65% 35%;
     }
-    .home__btn{
+
+    .home__btn {
         padding: 0;
         display: flex;
         align-items: center;
     }
-    .home__img{
+
+    .home__img {
         width: 100%;
     }
 
-    .limpeza__container{
+    .limpeza__container {
         padding: 0;
         grid-template-columns: repeat(4, 1fr);
     }
