@@ -60,8 +60,8 @@ const aLimpeza = [...document.querySelectorAll(".card__person")]
 const dateNow = document.getElementById('dateNow')
 
 // constante que recebe a função anônima
-
-const cleaning = () => {
+btn.addEventListener('click', 
+ () => {
     aLimpeza[0].innerHTML = "Katy"
     aLimpeza[1].innerHTML = "Katy"
     aLimpeza[2].innerHTML = "Alex"
@@ -74,5 +74,4 @@ const cleaning = () => {
         aLimpeza[2].innerHTML = "katy"
         aLimpeza[3].innerHTML = "Katy"
     }
-}
-cleaning();
+})
